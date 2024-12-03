@@ -25,7 +25,6 @@ local function notify(message, log_level)
    else
       return vim.notify(message, log_level, { title = "player.nvim" })
    end
-   return nil
 end
 
 --- If an argument is a supported player
