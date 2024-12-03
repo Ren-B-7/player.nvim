@@ -21,10 +21,11 @@ local status, notifier = pcall(require, "notify")
 ---@return function vim.notify
 local function notify(message, log_level)
    if (status and plugin_opts.notifier == 1) and 
-      return notifier(message, log_level, { title = "player.nvim" })
+      notifier(message, log_level, { title = "player.nvim" })
    else
-      return vim.notify(message, log_level, { title = "player.nvim" })
+      vim.notify(message, log_level, { title = "player.nvim" })
    end
+   return nil
 end
 
 --- If an argument is a supported player
