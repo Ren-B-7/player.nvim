@@ -20,10 +20,10 @@ local status, notifier = pcall(require, "notify")
 ---@param log_level string|nil vim.log.levels
 ---@return function vim.notify
 local function notify(message, log_level)
-   if (status and plugin_opts.notifier == 1) and 
-      notifier(message, log_level, { title = "player.nvim" })
+   if (status and plugin_opts.notifier == 1) then
+      return notifier(message, log_level, { title = "player.nvim" })
    else
-      vim.notify(message, log_level, { title = "player.nvim" })
+      return vim.notify(message, log_level, { title = "player.nvim" })
    end
    return nil
 end
