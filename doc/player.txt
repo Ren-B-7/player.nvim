@@ -46,6 +46,7 @@ INSTALL                                           *player-player.nvim-install*
 >lua
     {
       "alexxGmZ/player.nvim",
+      lazy = true,
       cmd = "Player", -- Lazy loading (optional) : plugin is loaded only when the command is called
     }
 <
